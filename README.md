@@ -18,8 +18,10 @@ python3
 
 ## 快速使用
 1、获取BN的 api_key 和 api_secret
+
 2、注册钉钉自定义机器人Webhook，用于推送交易信息到指定的钉钉群
 [钉钉自定义机器人注册方法](https://m.dingtalk.com/qidian/help-detail-20781541)
+
 3、修改app目录下的authorization文件
 ```
 api_key='你的key'
@@ -99,13 +101,6 @@ Linux, 1核CPU, 2G内存(1G也可)
 
 ## 钉钉信息截图
 ![image](https://user-images.githubusercontent.com/18456518/119217054-3cdb3c80-bb0a-11eb-9f66-60eb974bca46.png)
-
-
-
-
-
-## 可加WX交流群
-![image](https://user-images.githubusercontent.com/18456518/156103926-3de63513-0bc8-4674-889d-83b7283ed4cf.png)
 
 
 
