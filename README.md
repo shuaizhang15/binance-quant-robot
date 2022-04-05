@@ -1,85 +1,39 @@
 # binance-quant-robot
-数字货币，币安Binance, 比特币BTC 以太坊ETH 狗币DOGE 屎币SHIB 量化交易系统 火币 OKEX
-
-
-
 ## 简介
-这是一个数字货币量化交易系统，使用的Binance币安的交易API.
-
-如果你还没有币安账号：[注册页面](https://accounts.binancezh.io/zh-CN/register?ref=FJO3SX0X)（通过链接注册，享受交易返现优惠政策）
-
-这世上，没有百分百赚钱的方式，量化交易策略只是一个辅助工具。
-
-生死有命，富贵在天！币圈有风险，入市需谨慎！！
+这是一个量化交易系统，使用的BN的交易API。
 
 ## 双均线策略
 以 ETH 为例，5分钟K线数据，均线5 和 均线60 为例：
-
 均线5上穿均线60是金叉，执行买入；
 均线5下穿均线60是死叉，执行卖出；
 ![image](https://user-images.githubusercontent.com/18456518/119827775-18c59400-bf2c-11eb-821b-addda37b3b4a.png)
 这是一个比较好的情况，可以赚一点钱。
-
 <img width="1643" alt="image" src="https://user-images.githubusercontent.com/18456518/119828150-7b1e9480-bf2c-11eb-9443-d0d6c1f387ab.png">
 这是一个比较震荡的情况，会亏损。
-
-
 使用时，必须根据自身情况，调整 K线 和 均线！！！！
-
-
-如果你还没有币安账号：[注册页面](https://accounts.binancezh.io/zh-CN/register?ref=FJO3SX0X)（通过链接注册，享受交易返现优惠政策）
-
-## 为什么选择币安交易所
-交易的手续费看起来很少，但是随着交易次数逐步增多，手续费也是一笔不小的开支。
-所以我选择了币安，手续费低的大平台交易所
-> 火币手续费 Maker 0.2% Taker 0.2%
-
-> 币安手续费 Maker 0.1% Taker 0.1% （加上BNB家持手续费低至0.075%）
-
-
-如果你还没有币安账号：[注册页面](https://accounts.binancezh.io/zh-CN/register?ref=FJO3SX0X)（通过链接注册，享受交易返现优惠政策）
-
-
 
 ## 运行环境
 python3
-
 由于交易所的api在大陆无法访问，[需要科学上网](https://www.xlinkworld.dog/aff.php?aff=3010)
 
-
-
 ## 快速使用
-
-1、获取币安API的 api_key 和 api_secret
-
-申请api_key地址:
-
-[币安API管理页面](https://www.binance.com/cn/usercenter/settings/api-management)
-
-
+1、获取BN的 api_key 和 api_secret
 2、注册钉钉自定义机器人Webhook，用于推送交易信息到指定的钉钉群
-
 [钉钉自定义机器人注册方法](https://m.dingtalk.com/qidian/help-detail-20781541)
-
-
 3、修改app目录下的authorization文件
-
 ```
-api_key='你的币安key'
-api_secret='你的币安secret'
+api_key='你的key'
+api_secret='你的secret'
 dingding_token = '申请钉钉群助手的token'   # 强烈建议您使用
 ```
-
-
 4、交易策略配置信息 strategyConfig.py
 设置你的配置信息：
-
 ```
 # 均线, ma_x 要大于 ma_y
 ma_x = 5
 ma_y = 60
 
-# 币安
+# bn
 binance_market = "SPOT"#现货市场
 kLine_type = '15m' # 15分钟k线类型，你可以设置为5分钟K线：5m;1小时为：1h;1天为：1d
 ```
@@ -128,12 +82,12 @@ python robot-run.py
 
 
 ## 服务器部署
-购买服务器，建议是海外服务器，可以访问币安API
+购买服务器，建议是海外服务器，可以访问bnAPI
 
 ### 我的配置：
 Linux, 1核CPU, 2G内存(1G也可)
 
-我是在阿里云购买的日本东京服务器(传说币安服务器就在东京)
+我是在阿里云购买的日本东京服务器(传说bn服务器就在东京)
 
 也可选择 新加坡、香港服务器
 
